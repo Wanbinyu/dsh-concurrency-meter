@@ -1,0 +1,7 @@
+- insert:
+    - id: concurrency-meter
+      name: dsh-concurrency-meter
+      config:
+        warningThreshold: 3
+        maxActiveDetails: 20
+
