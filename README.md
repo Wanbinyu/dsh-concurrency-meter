@@ -22,9 +22,10 @@
 ## 安装
 
 要求 Node.js `>=22.19` 和 DeepSeek Harness `0.1.0-rc.6` 或更高版本。
+`v0.1.1` 已使用 DeepSeek Harness `0.1.1-rc.1` 完成类型、测试、构建和打包验证，并保留 `0.1.0-rc.6` 至 `rc.8` 的兼容分支。
 
 ```bash
-dsh plugin --profile web add https://github.com/Wanbinyu/dsh-concurrency-meter/releases/download/v0.1.0/dsh-concurrency-meter-0.1.0.tgz
+dsh plugin --profile web add https://github.com/Wanbinyu/dsh-concurrency-meter/releases/download/v0.1.1/dsh-concurrency-meter-0.1.1.tgz
 ```
 
 安装或更新后重启：
