@@ -20,6 +20,9 @@ type ViewState =
   | { status: 'error' }
   | { status: 'ready'; value: ConcurrencySnapshot }
 
+const ACTIVE_REFRESH_MS = 1000
+const IDLE_REFRESH_MS = 5000
+
 function purposeKey(purpose: MeterCallPurpose): ConcurrencyMeterKey {
   return `purpose.${purpose}` as ConcurrencyMeterKey
 }
@@ -44,13 +47,15 @@ export function ConcurrencyMeterSection({ snapshot, reset, t }: ConcurrencyMeter
     let current = true
     let timer: ReturnType<typeof setTimeout> | undefined
     const tick = async (): Promise<void> => {
+      let refreshMs = IDLE_REFRESH_MS
       try {
         const value = await snapshot()
+        refreshMs = value.active > 0 ? ACTIVE_REFRESH_MS : IDLE_REFRESH_MS
         if (current) setState({ status: 'ready', value })
       } catch {
         if (current) setState({ status: 'error' })
       }
-      if (current) timer = setTimeout(() => { void tick() }, 1000)
+      if (current) timer = setTimeout(() => { void tick() }, refreshMs)
     }
     void tick()
     return () => {
@@ -159,4 +164,3 @@ export function ConcurrencyMeterSection({ snapshot, reset, t }: ConcurrencyMeter
     </section>
   )
 }
-

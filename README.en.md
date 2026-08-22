@@ -22,10 +22,10 @@ Read-only model-request concurrency monitoring for DeepSeek Harness Web. The plu
 ## Install
 
 Requires Node.js `>=22.19` and DeepSeek Harness `0.1.0-rc.6` or later.
-`v0.1.1` is type-checked, tested, built, and package-validated against DeepSeek Harness `0.1.1-rc.1` while retaining a compatibility branch for `0.1.0-rc.6` through `rc.8`.
+`v0.1.2` is type-checked, tested, built, and package-validated against DeepSeek Harness `0.1.1-rc.2` while retaining compatibility with `0.1.0-rc.6` through `rc.8` and `0.1.1-rc.1`. It refreshes every second while requests are active and backs off to every five seconds when idle.
 
 ```bash
-dsh plugin --profile web add https://github.com/Wanbinyu/dsh-concurrency-meter/releases/download/v0.1.1/dsh-concurrency-meter-0.1.1.tgz
+dsh plugin --profile web add https://github.com/Wanbinyu/dsh-concurrency-meter/releases/download/v0.1.2/dsh-concurrency-meter-0.1.2.tgz
 ```
 
 Restart after installation or update:
