@@ -1,6 +1,6 @@
 {
   "name": "dsh-concurrency-meter",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Read-only model request concurrency monitoring for DeepSeek Harness",
   "repository": {
     "type": "git",
