@@ -4,6 +4,7 @@ const result = {
   mode: 'strict' as const,
   typeSymbol: 'dsh-concurrency-meter/types#ConcurrencySnapshot',
   schema: ConcurrencySnapshotSchema,
+  create: () => ConcurrencySnapshotSchema,
 }
 
 export const TYPERT = {

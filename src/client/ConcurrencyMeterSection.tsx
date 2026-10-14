@@ -1,9 +1,12 @@
 import { useCallback, useEffect, useState, type ReactNode } from 'react'
 import type { ConcurrencySnapshot, MeterCallPurpose } from '../client.ts'
-import { IconRefreshOutline16, Tooltip } from '@deepseek-ai/dsh-client-ui-primitives'
+import { Tooltip } from '@deepseek-ai/dsh-client-ui-primitives'
+import { hostIcon } from './hostIcon.ts'
 import type { InjectFace, PropsLocale, PropsRuntime } from '@deepseek-ai/dsh-client-ui-slots'
 import type { ConcurrencyMeterKey } from './locales.ts'
 import css from './ConcurrencyMeterSection.module.css'
+
+const IconRefreshOutline = hostIcon('IconRefreshOutlineMedium', 'IconRefreshOutline16')
 
 export interface ConcurrencyMeterSectionInjected {
   snapshot: () => Promise<ConcurrencySnapshot>
@@ -89,7 +92,7 @@ export function ConcurrencyMeterSection({ snapshot, reset, t }: ConcurrencyMeter
           </button>
           <Tooltip label={t('reload')} side="bottom">
             <button type="button" className={css.iconButton} aria-label={t('reload')} onClick={reload}>
-              <IconRefreshOutline16 size={16} />
+              <IconRefreshOutline size={16} />
             </button>
           </Tooltip>
         </div>

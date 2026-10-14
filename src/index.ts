@@ -11,10 +11,10 @@ export { ConcurrencyMeter } from './meter.ts'
 export const name = 'concurrency-meter'
 export const inject = ['llm']
 
-export const Config: z<ConcurrencyMeterConfig> = z.object({
+export const Config = z.object({
   warningThreshold: z.number().min(1).max(100).default(3),
   maxActiveDetails: z.number().min(1).max(100).default(20),
-})
+}) as unknown as z<ConcurrencyMeterConfig>
 
 export class ConcurrencyMeterGateway extends TypertRemoteService {
   constructor(ctx: Context, private readonly meter: ConcurrencyMeter) {

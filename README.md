@@ -1,6 +1,6 @@
 # dsh-concurrency-meter
 
-> **v0.1.6 兼容性修复**：适配 Harness `0.1.5-rc.2`，并通过 `0.1.1-rc.2` 回归。修复旧 runtime 模块缺失问题；下方下载链接指向本次修复包。其他宿主版本请先验证兼容性。
+> **v0.1.7 兼容性更新**：已对 Harness `0.2.1-alpha.3` 完成类型检查和测试。Peer 范围同时接受 `0.2.0-rc.2`、`0.1.5-rc.2` 和 `0.1.1-rc.2`。
 
 
 [English](README.en.md) | 简体中文
@@ -25,10 +25,10 @@
 ## 安装
 
 要求 Node.js `>=22.19` 和 DeepSeek Harness `0.1.0-rc.6` 或更高版本。
-`v0.1.6` 已使用 DeepSeek Harness `0.1.2-rc.1` 完成类型、测试、构建和打包验证，并保留 `0.1.0-rc.6` 至 `rc.8`、`0.1.1-rc.1` 至 `rc.2` 的兼容分支。活动请求期间每秒刷新，空闲时自动降为每 5 秒刷新。
+`v0.1.7` 已对 Harness `0.2.1-alpha.3` 完成类型检查和测试。Peer 范围同时接受 `0.2.0-rc.2`、`0.1.5-rc.2` 和 `0.1.1-rc.2`。活动请求期间每秒刷新，空闲时自动降为每 5 秒刷新。
 
 ```bash
-dsh plugin --profile web add https://github.com/Wanbinyu/dsh-concurrency-meter/releases/download/v0.1.6/dsh-concurrency-meter-0.1.6.tgz
+dsh plugin --profile web add https://github.com/Wanbinyu/dsh-concurrency-meter/releases/download/v0.1.7/dsh-concurrency-meter-0.1.7.tgz
 ```
 
 安装或更新后重启：

@@ -1,6 +1,6 @@
 # dsh-concurrency-meter
 
-> **v0.1.6 compatibility update**: verified against Harness `0.1.5-rc.2` and the `0.1.1-rc.2` baseline. Web plugins no longer request the retired runtime module. Download links below target the fixed archive; other host versions require verification.
+> **v0.1.7 compatibility update**: Typechecked and tested against Harness `0.2.1-alpha.3`. Peer ranges also accept `0.2.0-rc.2`, `0.1.5-rc.2`, and the `0.1.1-rc.2` baseline.
 
 
 English | [简体中文](README.md)
@@ -25,10 +25,10 @@ Read-only model-request concurrency monitoring for DeepSeek Harness Web. The plu
 ## Install
 
 Requires Node.js `>=22.19` and DeepSeek Harness `0.1.0-rc.6` or later.
-`v0.1.6` is type-checked, tested, built, and package-validated against DeepSeek Harness `0.1.2-rc.1` while retaining compatibility with `0.1.0-rc.6` through `rc.8` and `0.1.1-rc.1` through `rc.2`. It refreshes every second while requests are active and backs off to every five seconds when idle.
+`v0.1.7` was typechecked and tested against Harness `0.2.1-alpha.3`. Peer ranges also accept `0.2.0-rc.2`, `0.1.5-rc.2`, and the `0.1.1-rc.2` baseline. It refreshes every second while requests are active and backs off to every five seconds when idle.
 
 ```bash
-dsh plugin --profile web add https://github.com/Wanbinyu/dsh-concurrency-meter/releases/download/v0.1.6/dsh-concurrency-meter-0.1.6.tgz
+dsh plugin --profile web add https://github.com/Wanbinyu/dsh-concurrency-meter/releases/download/v0.1.7/dsh-concurrency-meter-0.1.7.tgz
 ```
 
 Restart after installation or update:
